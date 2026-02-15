@@ -256,7 +256,8 @@ Download: https://www.kaggle.com/datasets/hassan06/nslkdd
 
 ## 👤 Author
 
-Built with ❤️ using Claude AI as a step-by-step guide.
+Built with ❤️ chatgpt with a specific prompt
+.
 
 ---
 
