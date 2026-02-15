@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Threat Detection Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <span class="shield">🛡️</span>
+      <div>
+        <h1>Cyber Threat Detection</h1>
+        <p>Powered by Reinforcement Learning (DQN)</p>
+      </div>
+    </div>
+    <div class="status-badge">
+      <span class="dot"></span> AI Active
+    </div>
+  </header>
+
+  <!-- Stats Cards -->
+  <div class="cards">
+
+    <div class="card green">
+      <div class="card-icon">🎯</div>
+      <div class="card-info">
+        <span class="card-value" id="detection-rate">0%</span>
+        <span class="card-label">Detection Rate</span>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <div class="card-icon">✅</div>
+      <div class="card-info">
+        <span class="card-value" id="accuracy">0%</span>
+        <span class="card-label">Accuracy</span>
+      </div>
+    </div>
+
+    <div class="card red">
+      <div class="card-icon">🚨</div>
+      <div class="card-info">
+        <span class="card-value" id="attacks-caught">0</span>
+        <span class="card-label">Attacks Blocked</span>
+      </div>
+    </div>
+
+    <div class="card orange">
+      <div class="card-icon">⚠️</div>
+      <div class="card-info">
+        <span class="card-value" id="attacks-missed">0</span>
+        <span class="card-label">Attacks Missed</span>
+      </div>
+    </div>
+
+    <div class="card purple">
+      <div class="card-icon">🔔</div>
+      <div class="card-info">
+        <span class="card-value" id="false-alarms">0</span>
+        <span class="card-label">False Alarms</span>
+      </div>
+    </div>
+
+    <div class="card teal">
+      <div class="card-icon">📊</div>
+      <div class="card-info">
+        <span class="card-value" id="total">0</span>
+        <span class="card-label">Total Analyzed</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Live Event Feed -->
+    <div class="panel">
+      <h2>🔴 Live Traffic Feed</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Traffic Type</th>
+            <th>AI Decision</th>
+            <th>Reward</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="events-table">
+          <tr><td colspan="5" class="empty">Waiting for data...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Detection Progress Bar -->
+    <div class="panel">
+      <h2>📈 Performance Overview</h2>
+
+      <div class="metric">
+        <div class="metric-header">
+          <span>Detection Rate</span>
+          <span id="bar-detect-val">0%</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar green-bar" id="bar-detect"></div>
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-header">
+          <span>Accuracy</span>
+          <span id="bar-acc-val">0%</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar blue-bar" id="bar-acc"></div>
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-header">
+          <span>False Alarm Rate</span>
+          <span id="bar-fa-val">0%</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar orange-bar" id="bar-fa"></div>
+        </div>
+      </div>
+
+      <!-- Summary Box -->
+      <div class="summary">
+        <h3>AI Summary</h3>
+        <p id="summary-text">Loading...</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
